@@ -34,20 +34,8 @@ export default {
     },
     {
       title: 'Social Media Links',
-      name: 'socials',
-      type: 'document',
-      fields: [
-        {name: 'github', type: 'url', title: 'Github account'},
-        {name: 'twitter', type: 'url', title: 'Twitter account'},
-        {name: 'telegram', type: 'url', title: 'Telegram account'},
-        {name: 'instagram', type: 'url', title: 'Instagram account'},
-        {name: 'linkedin', type: 'url', title: 'Linkedin account'},
-        {
-          name: 'email', type: 'url', title: 'Email', validation: Rule => Rule.uri({
-            scheme: ['http', 'https', 'mailto', 'tel']
-          })
-        }
-      ]
+      name: 'links',
+      type: 'socialLinks',
     }
   ],
   preview: {
