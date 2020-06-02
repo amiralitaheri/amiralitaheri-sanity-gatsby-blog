@@ -24,7 +24,7 @@ export default {
     },
     {
       name: 'imageURL',
-      type: 'url',
+      type: 'mainImage',
       title: 'Image URL'
     },
     {
