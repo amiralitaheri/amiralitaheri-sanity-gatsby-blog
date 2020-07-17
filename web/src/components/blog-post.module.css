@@ -4,6 +4,9 @@
 .root {
   width: 80%;
   margin: auto;
+  @media (--media-min-medium) {
+    width: 94%;
+  }
 }
 
 .title {
