@@ -89,24 +89,31 @@ const IndexPage = props => {
   }
 
   return (
-    <Layout>
-      <SEO
-        title={site.title}
-        description={site.description}
-        keywords={site.keywords}
-      />
-      <Container>
-        <h1 hidden>Welcome to {site.title}</h1>
-        {postNodes && (
-          <BlogPostPreviewList
-            title='Latest blog posts'
-            nodes={postNodes}
-            browseMoreHref='/archive/'
-          />
-        )}
-      </Container>
-    </Layout>
+    <div style={{display: 'flex',flexDirection:'column',width:'100vw',height:'100vh',justifyContent:'center',alignItems:'center'}}>
+      <h3>It's going to be legen...</h3>
+      <h2 style={{fontSize:'10vw'}}>Wait for it</h2>
+      <h3>dary</h3>
+    </div>
   )
+  // return (
+  //   <Layout>
+  //     <SEO
+  //       title={site.title}
+  //       description={site.description}
+  //       keywords={site.keywords}
+  //     />
+  //     <Container>
+  //       <h1 hidden>Welcome to {site.title}</h1>
+  //       {postNodes && (
+  //         <BlogPostPreviewList
+  //           title='Latest blog posts'
+  //           nodes={postNodes}
+  //           browseMoreHref='/archive/'
+  //         />
+  //       )}
+  //     </Container>
+  //   </Layout>
+  // )
 }
 
 export default IndexPage
