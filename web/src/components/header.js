@@ -13,13 +13,22 @@ const Header = ({onHideNav, onShowNav, showNav, siteTitle}) => (
       </div>
 
       <button className={styles.toggleNavButton} onClick={showNav ? onHideNav : onShowNav}>
-        <Icon symbol='hamburger' />
+        <Icon symbol='hamburger'/>
       </button>
 
       <nav className={cn(styles.nav, showNav && styles.showNav)}>
         <ul>
           <li>
-            <Link to='/archive/'>Archive</Link>
+            <Link to='#works'>Works</Link>
+          </li>
+          <li>
+            <Link to='#skills'>Skills</Link>
+          </li>
+          <li>
+            <Link to='#about'>About</Link>
+          </li>
+          <li>
+            <Link to='/blog/'>Blog</Link>
           </li>
         </ul>
       </nav>

@@ -36,6 +36,7 @@
     "react-helmet": "^6.0.0"
   },
   "dependencies": {
-    "gatsby-image": "^2.0.41"
+    "gatsby-image": "^2.0.41",
+    "react-icons": "^3.10.0"
   }
 }
