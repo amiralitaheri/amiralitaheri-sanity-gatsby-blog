@@ -3,6 +3,7 @@ import Header from './header'
 
 import '../styles/layout.css'
 import styles from './layout.module.css'
+import SocialLinks from "./socialLinks";
 
 const Layout = ({children, onHideNav, onShowNav, showNav, siteTitle}) => (
   <>
@@ -10,6 +11,7 @@ const Layout = ({children, onHideNav, onShowNav, showNav, siteTitle}) => (
     <div className={styles.content}>{children}</div>
     <footer className={styles.footer}>
       <div className={styles.footerWrapper}>
+        <SocialLinks/>
         <div className={styles.siteInfo}>
           &copy; {new Date().getFullYear()}, Built with <a href='https://www.sanity.io'>Sanity</a>{' '}
           &amp;

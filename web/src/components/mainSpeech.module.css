@@ -1,0 +1,17 @@
+@import '../styles/custom-properties.css';
+
+.mainSpeech {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 1em 0 1em;
+  padding-left: 20px;
+  @nest & li {
+    padding: 0.3em 0 0.3em 0;
+    @nest &::after{
+      content:'.';
+      color: var(--color-accent);
+    }
+  }
+}
