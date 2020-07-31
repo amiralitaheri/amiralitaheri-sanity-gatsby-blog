@@ -9,6 +9,7 @@ import author from './documents/author'
 import category from './documents/category'
 import post from './documents/post'
 import siteSettings from './documents/siteSettings'
+import work from "./documents/work";
 
 // Object types
 import bodyPortableText from './objects/bodyPortableText'
@@ -17,7 +18,7 @@ import excerptPortableText from './objects/excerptPortableText'
 import mainImage from './objects/mainImage'
 import authorReference from './objects/authorReference'
 import socialLinks from "./objects/socialLinks";
-import work from "./documents/work";
+
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({

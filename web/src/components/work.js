@@ -1,12 +1,49 @@
 import React from 'react'
 import PortableText from './portableText'
+import {graphql, useStaticQuery} from "gatsby";
+import Img from "gatsby-image"
+import styles from './work.module.css'
 
-const Work = (props) => (
-  <div>
-    <h3>{props.name}</h3>
-    {props.description && <PortableText blocks={props.description}/>}
-  </div>
-)
+const Work = (props) => {
+  const data = useStaticQuery(graphql`
+    query {
+      allFile(
+        filter: {
+          extension: { regex: "/(jpg)|(png)|(jpeg)/" }
+          relativeDirectory: { eq: "images/works" }
+        }
+      ) {
+        edges {
+          node {
+            base
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
+      }
+    }
+  `)
+  const image = data.allFile.edges.find(image => image.node.base === props.imageName);
+  return (
+    <div className={styles.work} style={{flexDirection: props.direction || 'row'}}>
+      <div className={styles.verticalLine}/>
+      <Img
+        className={styles.image}
+        fixed={image?.node.childImageSharp.fluid}
+        alt={props.name}
+      />
+      <div className={styles.verticalLine}/>
+      <div className={styles.text}>
+        <span>{props.date}</span>
+        <h3>{props.name}</h3>
+        {props.description && <PortableText blocks={props.description}/>}
+      </div>
+    </div>
+  )
+}
 
 
 export default Work

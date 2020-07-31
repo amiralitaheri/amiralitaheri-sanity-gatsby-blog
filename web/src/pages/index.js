@@ -10,9 +10,8 @@ import Container from '../components/container'
 import GraphQLErrorList from '../components/graphql-error-list'
 import SEO from '../components/seo'
 import Layout from '../containers/layout'
-import LayoutContainer from "../containers/layout";
 import Banner from "../components/banner";
-
+import Works from "../components/works";
 
 
 const IndexPage = props => {
@@ -21,7 +20,7 @@ const IndexPage = props => {
   if (errors) {
     return (
       <Layout>
-        <GraphQLErrorList errors={errors} />
+        <GraphQLErrorList errors={errors}/>
       </Layout>
     )
   }
@@ -30,6 +29,7 @@ const IndexPage = props => {
     <Layout>
       <SEO/>
       <Banner/>
+      <Works/>
     </Layout>
   )
 }
