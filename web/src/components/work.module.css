@@ -25,9 +25,6 @@
   margin: min(3vw, 50px);
   max-width: 40vw;
   max-height: 40vw;
-  @nest & img {
-    -webkit-filter: grayscale(100%);
-  }
 }
 
 .date {

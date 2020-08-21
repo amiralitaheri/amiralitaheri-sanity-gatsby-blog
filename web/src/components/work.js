@@ -17,7 +17,7 @@ const Work = (props) => {
           node {
             base
             childImageSharp {
-              fixed{
+              fixed(grayscale:true){
                 ...GatsbyImageSharpFixed
               }
             }

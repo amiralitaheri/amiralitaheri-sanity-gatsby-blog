@@ -1,12 +1,12 @@
-import {useStaticQuery, graphql, Link} from "gatsby";
+import {useStaticQuery, graphql} from "gatsby";
 import React from "react";
 import Work from "./work";
 
 
-const Works = (props) => {
+const AllWorks = (props) => {
   const data = useStaticQuery(graphql`
-    query TopSanityWorks{
-      allSanityWork(sort: {fields: priority, order: DESC} limit:5) {
+    query AllSanityWorks{
+      allSanityWork(sort: {fields: priority, order: DESC}) {
         edges {
           node {
             id
@@ -25,7 +25,6 @@ const Works = (props) => {
     <section id='works'>
       <div className={'sectionHeader'}>
         <h2>Works</h2>
-        <p>A handful selection of my works. To see them all click <Link to='/works/'>Here</Link>.</p>
       </div>
 
       {
@@ -35,6 +34,6 @@ const Works = (props) => {
     </section>
   )
 }
-export default Works;
+export default AllWorks;
 
 

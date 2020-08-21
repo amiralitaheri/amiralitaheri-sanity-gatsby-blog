@@ -32,3 +32,17 @@ a {
   }
 
 }
+
+.sectionHeader {
+  @nest & *{
+    margin: auto;
+    width: fit-content;
+  }
+  @nest & a {
+    color: var(--color-accent);
+    @nest &:hover {
+      color: var(--color-very-light-gray);
+    }
+  }
+  margin-bottom: 50px;
+}
