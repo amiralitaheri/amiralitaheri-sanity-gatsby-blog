@@ -14,6 +14,7 @@ const Works = (props) => {
             description:_rawDescription
             date
             imageName
+            tags
           }
         }
       }

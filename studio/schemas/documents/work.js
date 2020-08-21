@@ -36,6 +36,16 @@ export default {
       name: 'priority',
       type: 'number',
       title: 'Priority'
+    },
+    {
+      name: 'tags',
+      type: 'array',
+      title: 'Tags',
+      of: [
+        {
+          type: 'string'
+        }
+      ]
     }
   ],
   orderings: [

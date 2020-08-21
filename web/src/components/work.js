@@ -17,8 +17,8 @@ const Work = (props) => {
           node {
             base
             childImageSharp {
-              fluid {
-                ...GatsbyImageSharpFluid
+              fixed{
+                ...GatsbyImageSharpFixed
               }
             }
           }
@@ -26,21 +26,26 @@ const Work = (props) => {
       }
     }
   `)
-  const image = data.allFile.edges.find(image => image.node.base === props.imageName);
+  const image = data.allFile.edges.find(image => image.node.base.split('.')[0] === props.imageName);
   return (
     <div className={styles.work} style={{flexDirection: props.direction || 'row'}}>
       <div className={styles.verticalLine}/>
       <Img
         className={styles.image}
-        fixed={image?.node.childImageSharp.fluid}
+        fixed={image?.node.childImageSharp.fixed}
         alt={props.name}
+        imgStyle={{
+          objectFit: 'contain'
+        }}
       />
       <div className={styles.verticalLine}/>
       <div className={styles.text}>
-        <span>{props.date}</span>
+        <span className={styles.date}>{props.date}</span>
         <h3>{props.name}</h3>
         {props.description && <PortableText blocks={props.description}/>}
+        <div className={styles.tags}>{props.tags.map(tag => <span>{tag}</span>)}</div>
       </div>
+
     </div>
   )
 }
