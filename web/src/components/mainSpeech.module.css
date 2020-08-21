@@ -30,7 +30,7 @@
   }
 }
 
-.secondaryAction{
+.secondaryAction {
   margin: 0 1em 0 1em;
   padding: 0.5em;
   color: inherit;
@@ -39,6 +39,8 @@
   @media (hover: hover) {
     @nest &:hover {
       border: 2px solid var(--color-white);
+      color: var(--color-white);
+      margin-left: calc(1em - 2px);
     }
   }
 }
