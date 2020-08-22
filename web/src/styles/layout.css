@@ -34,7 +34,7 @@ a {
 }
 
 .sectionHeader {
-  @nest & *{
+  @nest & * {
     margin: auto;
     width: fit-content;
   }
@@ -45,4 +45,12 @@ a {
     }
   }
   margin-bottom: 50px;
+}
+
+section {
+  margin-bottom: 50px;
+}
+
+p {
+  width: min(70ch, 70vw);
 }

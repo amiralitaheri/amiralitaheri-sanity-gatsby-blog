@@ -12,6 +12,7 @@ import SEO from '../components/seo'
 import Layout from '../containers/layout'
 import Banner from "../components/banner";
 import Works from "../components/works";
+import Skills from "../components/skills";
 
 
 const IndexPage = props => {
@@ -30,6 +31,7 @@ const IndexPage = props => {
       <SEO/>
       <Banner/>
       <Works/>
+      <Skills/>
     </Layout>
   )
 }
