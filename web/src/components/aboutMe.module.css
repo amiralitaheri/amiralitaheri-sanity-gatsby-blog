@@ -1,0 +1,7 @@
+@import '../styles/custom-properties.css';
+
+.container{
+  width: fit-content;
+  margin: auto;
+  display: flex;
+}

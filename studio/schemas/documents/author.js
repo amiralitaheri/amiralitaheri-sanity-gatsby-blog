@@ -33,6 +33,11 @@ export default {
       title: 'Biography'
     },
     {
+      name: 'about',
+      type: 'bioPortableText',
+      title: 'About Me'
+    },
+    {
       title: 'Social Media Links',
       name: 'links',
       type: 'socialLinks',
