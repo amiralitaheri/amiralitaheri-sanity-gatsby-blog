@@ -34,9 +34,14 @@ a {
 }
 
 .sectionHeader {
+  width: 80vw;
+  margin: auto auto 50px;
   @nest & * {
     margin: auto;
     width: fit-content;
+  }
+  @nest & p{
+    text-align: center;
   }
   @nest & a {
     color: var(--color-accent);
@@ -44,7 +49,6 @@ a {
       color: var(--color-very-light-gray);
     }
   }
-  margin-bottom: 50px;
 }
 
 section {
