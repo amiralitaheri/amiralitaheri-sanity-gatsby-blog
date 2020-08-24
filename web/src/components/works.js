@@ -25,7 +25,7 @@ const Works = (props) => {
     <section id='works'>
       <div className={'sectionHeader'}>
         <h2>Works</h2>
-        <p>A handful selection of my works. To see them all click <Link to='/works/'>Here</Link>.</p>
+        <p>A handful selection of my works. Click here to see all my <Link to='/works/'>works</Link>.</p>
       </div>
 
       {
