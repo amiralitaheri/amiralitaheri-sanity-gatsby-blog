@@ -43,7 +43,7 @@ const Work = (props) => {
         <span className={styles.date}>{props.date}</span>
         <h3>{props.name}</h3>
         {props.description && <PortableText blocks={props.description}/>}
-        <div className={styles.tags}>{props.tags.map(tag => <span>{tag}</span>)}</div>
+        <div className={styles.tags}>{props.tags.map(tag => <span key={tag}>{tag}</span>)}</div>
       </div>
 
     </div>

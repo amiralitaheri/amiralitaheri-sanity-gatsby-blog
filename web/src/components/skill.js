@@ -7,7 +7,7 @@ const Skill = (props) => <div className={styles.skill}>
   <div className={styles.text}>
     <h2>{props.name}</h2>
     <ul className={styles.subSkills}>
-      {props.subSkills.map(subSkill => <li>{subSkill}</li>)}
+      {props.subSkills.map(subSkill => <li key={subSkill}>{subSkill}</li>)}
     </ul>
     {props.description && <PortableText blocks={props.description}/>}
   </div>
