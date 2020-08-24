@@ -7,8 +7,17 @@
   justify-content: center;
   padding: 0;
 
-  @nest & li {
-    padding: 0.3em;
+  & li {
+    margin: 0.3em;
+    transition: all .2s ease-in-out;
+    @media (hover: hover) {
+      &:hover {
+        transform: scale(1.5);
+      }
+      & a{
+        transition: all .2s ease-in-out;
+      }
+    }
   }
 
 
