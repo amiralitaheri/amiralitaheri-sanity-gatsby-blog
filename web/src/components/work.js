@@ -9,7 +9,7 @@ const Work = (props) => {
     query {
       allFile(
         filter: {
-          extension: { regex: "/(jpg)|(png)|(jpeg)/" }
+          extension: { regex: "/(webp)/" }
           relativeDirectory: { eq: "images/works" }
         }
       ) {
