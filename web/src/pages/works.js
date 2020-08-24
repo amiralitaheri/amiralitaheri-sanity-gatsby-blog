@@ -3,9 +3,19 @@ import GraphQLErrorList from '../components/graphql-error-list'
 import SEO from '../components/seo'
 import Layout from '../containers/layout'
 import AllWorks from "../components/allWorks";
+import {graphql} from "gatsby";
 
+export const query = graphql`
+  query WorkPageQuery {
+    site: sanitySiteSettings(_id: { regex: "/(drafts.|)siteSettings/" }) {
+      title
+      description
+      keywords
+    }
+  }
+`
 
-const IndexPage = props => {
+const WorksPage = props => {
   const {data, errors} = props
 
   if (errors) {
@@ -15,13 +25,24 @@ const IndexPage = props => {
       </Layout>
     )
   }
+  const site = (data || {}).site
+
+  if (!site) {
+    throw new Error(
+      'Missing "Site settings". Open the studio at http://localhost:3333 and add some content to "Site settings" and restart the development server.'
+    )
+  }
 
   return (
     <Layout>
-      <SEO/>
+      <SEO
+        title='Works'
+        description={site.description}
+        keywords={site.keywords}
+      />
       <AllWorks/>
     </Layout>
   )
 }
 
-export default IndexPage
+export default WorksPage
