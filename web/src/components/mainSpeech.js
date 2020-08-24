@@ -11,7 +11,7 @@ const MainSpeech = () => (
       <li>A Confused man in tech world</li>
       <li>Computer engineering student</li>
     </ul>
-    <div style={{height:'2em'}}></div>
+    <div style={{height: '2em'}}/>
     <Link className={styles.primaryAction} to='/blog/'>Blog</Link>
     <a className={styles.secondaryAction} href='#works'>Works</a>
   </div>
