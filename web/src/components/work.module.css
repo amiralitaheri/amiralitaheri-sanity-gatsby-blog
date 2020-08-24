@@ -13,7 +13,6 @@
 
 .text {
   margin: min(3vw, 50px);
-  width: 50vw;
   @nest & a {
     color: var(--color-accent);
     @nest &:hover {
