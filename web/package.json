@@ -42,6 +42,7 @@
     "gatsby-source-filesystem": "^2.3.23",
     "gatsby-transformer-sharp": "^2.5.11",
     "react-icons": "^3.10.0",
+    "react-syntax-highlighter": "^13.5.1",
     "vazir-font": "^26.0.2"
   }
 }

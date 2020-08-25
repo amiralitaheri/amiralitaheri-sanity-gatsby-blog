@@ -40,7 +40,7 @@ a {
     margin: auto;
     width: fit-content;
   }
-  @nest & p{
+  @nest & p {
     text-align: center;
   }
   @nest & a {
@@ -56,5 +56,5 @@ section {
 }
 
 p {
-  width: min(70ch, 70vw);
+  max-width: 70ch;
 }
