@@ -8,7 +8,7 @@ import PortableText from './portableText'
 import styles from './blog-post-preview.module.css'
 import {responsiveTitle3} from './typography.module.css'
 
-function BlogPostPreview (props) {
+function BlogPostPreview(props) {
   return (
     <Link
       className={props.isInList ? styles.inList : styles.inGrid}
@@ -26,11 +26,11 @@ function BlogPostPreview (props) {
           />
         )}
       </div>
-      <div className={styles.text}>
+      <div className={cn(styles.text, props.language && styles.fa)}>
         <h3 className={cn(responsiveTitle3, styles.title)}>{props.title}</h3>
         {props._rawExcerpt && (
-          <div className={styles.excerpt}>
-            <PortableText blocks={props._rawExcerpt} />
+          <div className={cn(styles.excerpt)}>
+            <PortableText blocks={props._rawExcerpt}/>
           </div>
         )}
         <div className={styles.date}>{format(props.publishedAt, 'MMMM Do, YYYY')}</div>
