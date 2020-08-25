@@ -54,6 +54,16 @@ export default {
       description: 'fa or en'
     },
     {
+      name: 'tags',
+      type: 'array',
+      title: 'Tags',
+      of: [
+        {
+          type: 'string'
+        }
+      ]
+    },
+    {
       name: 'categories',
       type: 'array',
       title: 'Categories',

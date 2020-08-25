@@ -27,6 +27,7 @@ export const query = graphql`
       }
       _rawExcerpt(resolveReferences: {maxDepth: 5})
       _rawBody(resolveReferences: {maxDepth: 5})
+      tags
       authors {
         _key
         author {
@@ -63,12 +64,16 @@ const BlogPostTemplate = props => {
   const post = data && data.post
   return (
     <Layout>
-      {errors && <SEO title='GraphQL Error' />}
-      {post && <SEO title={post.title || 'Untitled'} description={toPlainText(post._rawExcerpt)} image={post.mainImage} />}
+      {errors && <SEO title='GraphQL Error'/>}
+      {post && <SEO title={post.title || 'Untitled'}
+                    description={toPlainText(post._rawExcerpt)}
+                    image={post.mainImage}
+                    keywords={post.tags}
+      />}
 
       {errors && (
         <Container>
-          <GraphQLErrorList errors={errors} />
+          <GraphQLErrorList errors={errors}/>
         </Container>
       )}
 

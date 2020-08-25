@@ -10,7 +10,7 @@ import AuthorList from './author-list'
 import styles from './blog-post.module.css'
 
 function BlogPost(props) {
-  const {_rawBody, authors, categories, title, mainImage, publishedAt, language} = props
+  const {_rawBody, authors, tags, title, mainImage, publishedAt, language} = props
   return (
     <article className={styles.root}>
       {mainImage && mainImage.asset && (
@@ -41,12 +41,12 @@ function BlogPost(props) {
               </div>
             )}
             {authors && <AuthorList items={authors} title='Authors'/>}
-            {categories && (
-              <div className={styles.categories}>
-                <h3 className={styles.categoriesHeadline}>Categories</h3>
+            {tags && (
+              <div className={styles.tags}>
+                <h3 className={styles.tagsHeadline}>Tags</h3>
                 <ul>
-                  {categories.map(category => (
-                    <li key={category._id}>{category.title}</li>
+                  {tags.map(tag => (
+                    <li key={tag}>{tag}</li>
                   ))}
                 </ul>
               </div>
