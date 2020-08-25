@@ -84,7 +84,7 @@ figcaption {
 .publishedAt {
   composes: small from './typography.module.css';
   margin: 2rem 0 3rem;
-  color: var(--color-gray);
+  color: var(--color-light-gray);
 }
 
 .tags {
