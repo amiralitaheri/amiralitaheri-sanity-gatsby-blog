@@ -35,34 +35,19 @@ module.exports = {
     },
     {
       resolve: `gatsby-plugin-sitemap`,
-      // options: {
-      //   query: `
-      //   {
-      //     wp {
-      //       generalSettings {
-      //         siteUrl
-      //       }
-      //     }
-      //
-      //     allSitePage {
-      //       nodes {
-      //         path
-      //       }
-      //     }
-      // }`,
-      //   resolveSiteUrl: ({site, allSitePage}) => {
-      //     //Alternatively, you may also pass in an environment variable (or any location) at the beginning of your `gatsby-config.js`.
-      //     return site.wp.generalSettings.siteUrl
-      //   },
-      //   serialize: ({ site, allSitePage }) =>
-      //     allSitePage.nodes.map(node => {
-      //       return {
-      //         url: `${site.wp.generalSettings.siteUrl}${node.path}`,
-      //         changefreq: `daily`,
-      //         priority: 0.7,
-      //       }
-      //     })
-      // }
     },
+    {
+      resolve: `gatsby-plugin-hotjar`,
+      options: {
+        id: process.env.HOTJAR_ID,
+        sv: process.env.HOTJAR_SNIPPET_VERSION
+      },
+    },
+    // {
+    //   resolve: `gatsby-plugin-google-analytics`,
+    //   options: {
+    //     trackingId: process.env.GOOGLE_ANALYTICS_TRACKING_ID,
+    //   }
+    // },
   ]
 }
