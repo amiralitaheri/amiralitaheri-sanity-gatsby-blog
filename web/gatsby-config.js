@@ -7,7 +7,11 @@ const clientConfig = require('./client-config')
 
 const isProd = process.env.NODE_ENV === 'production'
 
+
 module.exports = {
+  siteMetadata: {
+    siteUrl: `https://amiralitaheri.ir`,
+  },
   plugins: [
     'gatsby-plugin-postcss',
     'gatsby-plugin-react-helmet',
