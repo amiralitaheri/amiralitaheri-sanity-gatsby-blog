@@ -1,6 +1,6 @@
 import React from 'react';
 import SyntaxHighlighter from 'react-syntax-highlighter';
-import {a11yDark} from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import {darcula} from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
 // todo: decide between highlight.js and prism
 // todo use light build
@@ -13,7 +13,7 @@ export default ({node}) => {
   return (
     <SyntaxHighlighter
       language={language}
-      style={a11yDark}
+      style={darcula}
       showLineNumbers={true}
       wrapLines={true}
       lineProps={{style: {display: 'flex', maxWidth: '70ch'}}}
