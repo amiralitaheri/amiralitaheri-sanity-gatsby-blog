@@ -43,11 +43,11 @@ module.exports = {
         sv: process.env.HOTJAR_SNIPPET_VERSION
       },
     },
-    // {
-    //   resolve: `gatsby-plugin-google-analytics`,
-    //   options: {
-    //     trackingId: process.env.GOOGLE_ANALYTICS_TRACKING_ID,
-    //   }
-    // },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: process.env.GOOGLE_ANALYTICS_MEASUREMENT_ID,
+      }
+    },
   ]
 }
