@@ -44,7 +44,7 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-plugin-gtag`,
       options: {
         trackingId: process.env.GOOGLE_ANALYTICS_MEASUREMENT_ID,
       }
