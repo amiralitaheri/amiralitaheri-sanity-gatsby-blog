@@ -12,7 +12,6 @@
 
 .text {
   margin: 0 min(5vw, 50px) 0 min(5vw, 50px);
-  width: 50vw;
   & a {
     color: var(--color-accent);
     &:hover {
