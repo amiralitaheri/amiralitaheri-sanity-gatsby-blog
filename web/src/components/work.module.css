@@ -12,7 +12,8 @@
 }
 
 .text {
-  margin: min(3vw, 50px);
+  width: max(50vw,400px);
+  padding: min(5vw, 50px);
   @nest & a {
     color: var(--color-accent);
     @nest &:hover {
@@ -23,8 +24,8 @@
 
 .image {
   margin: min(3vw, 50px);
-  max-width: 40vw;
-  max-height: 40vw;
+  max-width: 60vw;
+  max-height: 60vw;
 }
 
 .date {
