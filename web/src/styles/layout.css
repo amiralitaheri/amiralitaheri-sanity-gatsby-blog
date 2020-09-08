@@ -58,3 +58,8 @@ section {
 p {
   max-width: 70ch;
 }
+
+.fa {
+  direction: rtl;
+  font-family: var(--font-family-persian);
+}

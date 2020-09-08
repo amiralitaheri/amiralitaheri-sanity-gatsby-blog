@@ -1,11 +1,6 @@
 @import '../styles/custom-media.css';
 @import '../styles/custom-properties.css';
 
-.fa {
-  direction: rtl;
-  font-family: var(--font-family-persian);
-}
-
 pre {
   direction: ltr;
 }
