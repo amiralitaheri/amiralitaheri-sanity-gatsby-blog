@@ -30,6 +30,18 @@
         content: "copy to clipboard";
       }
     }
+
+    @media (hover: none) {
+      &:hover {
+        color: white;
+        cursor: pointer;
+
+        &:before {
+          padding-right: 0.3rem;
+          content: "copied";
+        }
+      }
+    }
   }
 
   & span {
