@@ -8,7 +8,8 @@
   width: max(60vw,300px);
   & textarea {
     height: 10em;
-
+    font-size: 1em;
+    font-family: var(--font-family-persian);
   }
 
 }

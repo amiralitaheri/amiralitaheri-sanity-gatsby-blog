@@ -12,7 +12,7 @@ import styles from './blog-post.module.css'
 import CommentSection from "./CommentSection";
 
 function BlogPost(props) {
-  const {_rawBody, authors, tags, title, mainImage, publishedAt, language} = props
+  const {id, _rawBody, authors, tags, title, mainImage, publishedAt, language} = props
   return (
     <article className={styles.root}>
       {mainImage && mainImage.asset && (
@@ -56,7 +56,7 @@ function BlogPost(props) {
             )}
           </aside>
         </div>
-        <CommentSection/>
+        <CommentSection language={language} postId={id}/>
       </Container>
     </article>
   )

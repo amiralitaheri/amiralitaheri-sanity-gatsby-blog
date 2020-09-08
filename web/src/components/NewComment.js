@@ -3,10 +3,11 @@ import styles from './NewComment.module.css';
 import UserContext from "../context/UserContext";
 import ReactModal from 'react-modal';
 import FirebaseLogin from "./FirebaseLogin";
-import {auth} from "../firebase";
+import {auth, firestore} from "../firebase";
+
 
 ReactModal.setAppElement('#___gatsby');
-const newComment = () => {
+const newComment = ({postId, language}) => {
   const user = useContext(UserContext);
   const [modalState, setModalState] = useState(false);
   if (user !== null && modalState === true) {
@@ -27,14 +28,29 @@ const newComment = () => {
       <FirebaseLogin/>
     </ReactModal>
     <form className={styles.form}>
-      <label>Write a comment</label>
-      <textarea></textarea>
-
+      <label for='comment'>Write a comment</label>
+      <textarea id='comment' className={language}></textarea>
       {user === null ? <button className={styles.primaryAction} onClick={event => {
         event.preventDefault();
         setModalState(true);
       }}>login</button> : <>
-        <button className={styles.primaryAction}>comment</button>
+        <button className={styles.primaryAction} onClick={event => {
+          event.preventDefault();
+          const commentText = document.getElementById('comment').value;
+          firestore.collection('posts').doc(postId).collection('comments').add({
+            commentText,
+            date: Date.now(),
+            isAnonymous: user.isAnonymous,
+            email: user.email,
+            displayName: user.displayName
+          }).then(
+            //todo
+          ).catch(
+            //todo
+          );
+        }
+        }>comment
+        </button>
         <button className={styles.secondaryAction} onClick={(event => {
           event.preventDefault();
           auth.signOut();

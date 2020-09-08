@@ -1,9 +1,9 @@
 import React from "react";
 import NewComment from "./NewComment";
 
-const commentSection = () =>
+const commentSection = (props) =>
   <div>
-    <NewComment/>
+    <NewComment {...props} />
     {/*<Comments/>*/}
   </div>
 
