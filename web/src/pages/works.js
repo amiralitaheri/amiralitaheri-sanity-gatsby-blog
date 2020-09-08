@@ -8,8 +8,6 @@ import {graphql} from "gatsby";
 export const query = graphql`
   query WorkPageQuery {
     site: sanitySiteSettings(_id: { regex: "/(drafts.|)siteSettings/" }) {
-      title
-      description
       keywords
     }
   }
@@ -37,7 +35,7 @@ const WorksPage = props => {
     <Layout>
       <SEO
         title='Works'
-        description={site.description}
+        description='A short summary of project that I (Seyed Amirali Taheri) had done.'
         keywords={site.keywords}
       />
       <AllWorks/>
