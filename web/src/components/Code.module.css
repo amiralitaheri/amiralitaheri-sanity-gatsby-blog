@@ -1,0 +1,40 @@
+@import "../styles/custom-properties.css";
+
+.code {
+  direction: ltr;
+  background-color: rgb(43, 43, 43);
+  color: var(--color-light-gray);
+  font-size: var(--font-base-size);
+}
+
+.codeHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 1px solid var(--color-accent);
+
+  & button {
+    box-sizing: border-box;
+    margin: .3rem;
+    background-color: inherit;
+    color: inherit;
+    box-shadow: none;
+    border: none;
+
+    &:hover {
+      color: white;
+      cursor: pointer;
+
+      &:before {
+        padding-right: 0.3rem;
+        content: "copy to clipboard";
+      }
+    }
+  }
+
+  & span {
+    padding: 0 .3rem;
+    margin: .3rem 1.5rem;
+    border-left: 2px solid var(--color-accent);
+  }
+}
