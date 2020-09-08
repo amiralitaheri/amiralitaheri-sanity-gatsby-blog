@@ -6,6 +6,7 @@ import BlogPost from '../components/blog-post'
 import SEO from '../components/seo'
 import Layout from '../containers/layout'
 import {toPlainText} from '../lib/helpers'
+import SimpleReactLightbox from "simple-react-lightbox";
 
 export const query = graphql`
   query BlogPostTemplateQuery($id: String!) {
@@ -76,8 +77,9 @@ const BlogPostTemplate = props => {
           <GraphQLErrorList errors={errors}/>
         </Container>
       )}
-
-      {post && <BlogPost {...post} />}
+      <SimpleReactLightbox>
+        {post && <BlogPost {...post} />}
+      </SimpleReactLightbox>
     </Layout>
   )
 }

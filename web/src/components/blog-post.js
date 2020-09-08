@@ -5,12 +5,23 @@ import {imageUrlFor} from '../lib/image-url'
 import PortableText from './portableText'
 import Container from './container'
 import AuthorList from './author-list'
+import {SRLWrapper} from "simple-react-lightbox";
 
 
 import styles from './blog-post.module.css'
 
 function BlogPost(props) {
-  const {_rawBody, authors, tags, title, mainImage, publishedAt, language} = props
+  const {_rawBody, authors, tags, title, mainImage, publishedAt, language} = props;
+  const lightBoxOptions = {
+    settings: {},
+    caption: {},
+    buttons: {
+      showAutoplayButton:false,
+      showThumbnailsButton:false
+    },
+    thumbnails: {},
+    progressBar:{}
+  }
   return (
     <article className={styles.root}>
       {mainImage && mainImage.asset && (
@@ -30,7 +41,9 @@ function BlogPost(props) {
         <div className={styles.grid}>
           <div className={cn(styles.mainContent, language === 'fa' && styles.fa)}>
             <h1 className={styles.title}>{title}</h1>
-            {_rawBody && <PortableText blocks={_rawBody}/>}
+            <SRLWrapper options={lightBoxOptions}>
+              {_rawBody && <PortableText blocks={_rawBody}/>}
+            </SRLWrapper>
           </div>
           <aside className={styles.metaContent}>
             {publishedAt && (
