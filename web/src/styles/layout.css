@@ -58,3 +58,8 @@ section {
 p {
   max-width: 70ch;
 }
+
+::selection{
+  background-color: var(--color-accent);
+  color: var(--color-white);
+}
