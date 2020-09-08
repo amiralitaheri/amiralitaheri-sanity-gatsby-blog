@@ -2,7 +2,7 @@ import React from "react";
 import NewComment from "./NewComment";
 
 const commentSection = (props) =>
-  <div>
+  <div id='commentSection'>
     <NewComment {...props} />
     {/*<Comments/>*/}
   </div>
