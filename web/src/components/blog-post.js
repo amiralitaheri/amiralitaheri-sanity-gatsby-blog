@@ -9,6 +9,7 @@ import PostFooter from './postFooter'
 
 
 import styles from './blog-post.module.css'
+import CommentSection from "./CommentSection";
 
 function BlogPost(props) {
   const {_rawBody, authors, tags, title, mainImage, publishedAt, language} = props
@@ -55,6 +56,7 @@ function BlogPost(props) {
             )}
           </aside>
         </div>
+        <CommentSection/>
       </Container>
     </article>
   )

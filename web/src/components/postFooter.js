@@ -24,7 +24,7 @@ export default ({tags}) => {
         </button>
         <button className={styles.shareButton} type='button' onClick={() => {
           navigator.clipboard.writeText(location.href);
-        }}><FaClipboard/>Copy to clipboard
+        }}><FaClipboard/>Copy URL
         </button>
       </div>
       <div>

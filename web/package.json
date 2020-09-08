@@ -33,7 +33,8 @@
     "prettier-eslint-cli": "^5.0.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-helmet": "^6.1.0"
+    "react-helmet": "^6.1.0",
+    "react-modal": "^3.11.2"
   },
   "dependencies": {
     "firebase": "^7.19.0",
@@ -41,6 +42,7 @@
     "gatsby-plugin-sharp": "^2.6.28",
     "gatsby-source-filesystem": "^2.3.25",
     "gatsby-transformer-sharp": "^2.5.13",
+    "react-firebaseui": "^4.1.0",
     "react-icons": "^3.11.0",
     "react-syntax-highlighter": "^13.5.1",
     "vazir-font": "^26.0.2"
