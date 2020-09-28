@@ -6,7 +6,7 @@ import Skill from "./skill";
 const Skills = (props) => {
   const data = useStaticQuery(graphql`
     query AllSanitySkill{
-      allSanitySkill{
+      allSanitySkill(sort: {fields: priority, order: DESC}){
         nodes{
           id,
           name,
