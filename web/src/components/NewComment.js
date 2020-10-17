@@ -13,7 +13,6 @@ const newComment = ({postId, language}) => {
   if (user !== null && modalState === true) {
     setModalState(false);
   }
-  console.log(user);
   return <>
     <ReactModal
       isOpen={modalState}
@@ -42,7 +41,8 @@ const newComment = ({postId, language}) => {
             date: Date.now(),
             isAnonymous: user.isAnonymous,
             email: user.email,
-            displayName: user.displayName
+            displayName: user.displayName,
+            photoURL: user.photoURL
           }).then(
             //todo
           ).catch(
