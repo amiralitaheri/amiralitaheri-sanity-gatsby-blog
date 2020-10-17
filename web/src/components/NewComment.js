@@ -36,18 +36,20 @@ const newComment = ({postId, language}) => {
         <button className={styles.primaryAction} onClick={event => {
           event.preventDefault();
           const commentText = document.getElementById('comment').value;
-          firestore.collection('posts').doc(postId).collection('comments').add({
-            commentText,
-            date: Date.now(),
-            isAnonymous: user.isAnonymous,
-            email: user.email,
-            displayName: user.displayName,
-            photoURL: user.photoURL
-          }).then(
-            //todo
-          ).catch(
-            //todo
-          );
+          if (commentText !== '') {
+            firestore.collection('posts').doc(postId).collection('comments').add({
+              commentText,
+              date: Date.now(),
+              isAnonymous: user.isAnonymous,
+              email: user.email,
+              displayName: user.displayName,
+              photoURL: user.photoURL
+            }).then(
+              //todo
+            ).catch(
+              //todo
+            );
+          }
         }
         }>comment
         </button>
