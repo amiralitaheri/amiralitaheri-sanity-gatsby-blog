@@ -16,3 +16,6 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 export const auth = firebase.auth();
 export const firestore = firebase.firestore();
+
+//todo: fix build problem
+// https://stackoverflow.com/questions/61334290/gatsbyjs-with-firebase-webpackerror-referenceerror-idbindex-is-not-defined/61336305#61336305

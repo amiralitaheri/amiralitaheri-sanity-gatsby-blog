@@ -21,4 +21,6 @@ const Comments = ({postId, language}) => {
   </div>
 }
 
+//todo: find out why comments won't render
+
 export default Comments;
