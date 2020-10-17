@@ -28,7 +28,7 @@ const newComment = ({postId, language}) => {
       <FirebaseLogin/>
     </ReactModal>
     <form className={styles.form}>
-      <label for='comment'>Write a comment</label>
+      <label htmlFor='comment'>Write a comment</label>
       <textarea id='comment' className={language}></textarea>
       {user === null ? <button className={styles.primaryAction} onClick={event => {
         event.preventDefault();
