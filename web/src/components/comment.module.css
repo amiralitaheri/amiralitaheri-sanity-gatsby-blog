@@ -1,0 +1,31 @@
+@import '../styles/custom-properties.css';
+
+.container {
+  border-bottom: 2px solid var(--color-accent);
+  padding: 15px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  & time{
+    color: var(--color-light-gray);
+    font-size: min(3vw,1em);
+  }
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+
+  & img {
+    border-radius: 100%;
+    width: min(12vw,4em);
+  }
+
+  & span {
+    padding: 1em;
+    font-size: min(4vw,1.2em);
+  }
+}

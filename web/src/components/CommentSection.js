@@ -1,10 +1,11 @@
 import React from "react";
 import NewComment from "./NewComment";
+import Comments from "./comments";
 
 const commentSection = (props) =>
   <div id='commentSection'>
     <NewComment {...props} />
-    {/*<Comments/>*/}
+    <Comments {...props}/>
   </div>
 
 
