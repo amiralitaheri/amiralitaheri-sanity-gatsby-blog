@@ -13,7 +13,7 @@ const SocialLinks = (props) => (
       <li><a href='https://www.instagram.com/amiralitaheri64' target="_blank" rel='noopener'><FaInstagram/></a></li>
       <li><a href='https://www.linkedin.com/in/amiralitaheri64/' target="_blank" rel='noopener'><FaLinkedinIn/></a></li>
       <li><a href='mailto:amiralitaheri64@gmail.com' target="_blank" rel='noopener'><FiMail/></a></li>
-      <li><a href='https://gitlab.com/amiralitaheri64' target="_blank" rel='noopener'><FaGitlab/></a></li>
+      <li><a href='https://gitlab.com/amiralitaheri' target="_blank" rel='noopener'><FaGitlab/></a></li>
     </ul>
   </IconContext.Provider>
 )
